@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="HTML5-CSS-Reset.css" type="text/css">
+<!-- For CSS Page -->
+ <link rel="stylesheet" href = "project-it.css" type="text/css">
+    <!--For font -->
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+   <!--For styling the page  -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.w3-bar-block, .w3-bar-item {padding:20px}
+    
+#bg {
+  background-image: url(care.w.JPG);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 80px;
+}
+</style>
+    
+<title>من نحن</title>
+</head>
+<body>
+
+    
+<!-- Navigation Bar  -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="project_IT.html" onclick="w3_close()" class="w3-bar-item w3-button">الصفحة الرئيسية</a>
+  <a href="depbody.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالجسم</a>
+  <a href="hair.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالشعر</a>
+  <a href="skin.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالبشرة</a>
+             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">انضمي لنا</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Care.JPG" alt="" class="avatar" style="width:20%; height: 40%">
+    </div>
+  <h1 style="text-align:center">هلا والله</h1>
+    <h2 style="text-align:center">جديدة هنا ؟</h2>
+        <p style="text-align:center">سجلي معنا واكتشفي المحتوى الرائع !</p>
+    <div class="container">
+      <label for="uname"><b>اسم المستخدم</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>كلمة المرور</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" style="background-color: #fff0f0">تسجيل دخول</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> تذكرني
+      </label>
+    </div>
+
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">إلغاء</button>
+      <span class="psw">نسيت <a href="#">كلمة المرور؟</a></span>
+    </div>
+  </form>
+</div>
+</nav>
+    
+ <!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16"> <img src="logo.png" alt="" style="width:10%"></div>
+  </div>
+</div>
+    
+   <!-- !PAGE CONTENT! -->
+    
+<div  class="main">
+
+<div id="bg">
+  <h1>من نحن</h1>
+  <h2 style="font-size:40px">
+نحن طالبات جامعة ام القرى ،كلية الحاسب الالي وُنظم المعلومات، قسم نُظم المعلومات.
+هذا الموقع مشروعنا لمادة تقنيات الانترنت، 
+في موقعنا الصغيرة هذا سنقدم بعض المعلومات عن الجمال والعناية في عدة اقسام منها (الشعر ،الجسم ،البشرة )
+نتمنى لكم الحصول على الفائدة</h2>
+  <p style="font-size:30px;text-align: center">مع كل حب ربى الحربي ، جواهر الزهراني ،و رغد المطرفي</p>
+</div>
+    </div>
+        
+  <hr>
+    
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+         <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> 
+      <br>
+       <a href="project_IT.html" target="_self"> الصفحة الرئيسية</a><br>
+      <a href="Who are we.html" target="_blank"> من نحن </a><br>
+      <a href="call-us.html" target="_blank"> اتصل بنا </a>
+     </footer> 
+<!-- End page content -->
+    <script>
+        // Navbar mneu 
+    // Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("mySidebar").style.width = "100%";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+       //For img bg 
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+   </script> 
+
+</body>
+</html>

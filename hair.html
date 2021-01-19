@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>العناية بالشعر</title>
+ <meta charset="utf-8">
+<link rel="stylesheet" href="HTML5-CSS-Reset.css" type="text/css">
+    <!-- For CSS Page -->
+<link rel="stylesheet" href = "project-it.css" type="text/css">
+<!--For styling the page  -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <!--For font -->
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+<style>.w3-bar-block, .w3-bar-item {padding:20px}
+    /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 10px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #fff0f0;
+  padding: 10px;
+  text-align:right;
+  
+}
+h4,h2{
+text-align:center;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+   border: none;
+  outline: none;
+  float:right;
+  margin:3px;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;/*علامة الفاره*/
+ 
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #fff0f0;
+  color: white;
+}
+label{
+color:#004d00;
+}
+
+
+
+</style>
+
+</head>
+<body>
+ 
+<!-- Navigation Bar  -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="project_IT.html" onclick="w3_close()" class="w3-bar-item w3-button">الصفحة الرئيسية</a>
+  <a href="depbody.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالجسم</a>
+  <a href="hair.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالشعر</a>
+  <a href="skin.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالبشرة</a>
+
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">انضمي لنا</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Care.JPG" alt="" class="avatar" style="width:20%; height: 40%">
+    </div>
+  <h1 style="text-align:center">هلا والله</h1>
+    <h2 style="text-align:center">جديدة هنا ؟</h2>
+        <p style="text-align:center">سجلي معنا واكتشفي المحتوى الرائع !</p>
+    <div class="container">
+      <label for="uname"><b>اسم المستخدم</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>كلمة المرور</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" style="background-color: #fff0f0">تسجيل دخول</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> تذكرني
+      </label>
+    </div>
+
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">إلغاء</button>
+      <span class="psw">نسيت <a href="#">كلمة المرور؟</a></span>
+    </div>
+  </form>
+</div>
+</nav>
+    
+ <!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1300px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16"> <img src="logo.png" alt="" style="width:10%"></div>
+  </div>
+</div>
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1 align="center">قسم العناية بالشعر</h1>
+<hr>
+
+<h2 align="center">الشعر</h2>
+<p align="center" >تتأثر نفسية النساء بشكل خاص بمشاكل الشعر، وهي من أكثر المشاكل التي يتوجهن بسببها إلى عيادات الأمراض الجلدية والتجميل
+، وتتنوّع مشاكل الشعر من سقوطه إلى تقصّفه وحتى ضعفه وجفافه؛ وهذه مشكلة مختلف الأجناس والأعمار فحتى الأطفال لم يسلموا من هذا الأمر. 
+الشعر تاج جمال المرأة وزينتها، فلذلك يجب أن تعرف أهمّ التفاصيل والمعلومات التي تخصّ نوع وطبيعة شعرها، وهذا لتتعلّم أفضل الطرق للعناية به 
+ويجب أيضا أن تعرف ما هي الأمور التي قد تتسبّب لشعرها بالضرر ولشعر طفلها أيضاً
+<br>
+ ...اليك نظام عناية مبسط نتمنى أن تنالين الفائدة
+ </p>
+<div id="hair">
+  <button class="btn active" onclick="Selection('all')"> Show all</button>
+  <button class="btn" onclick="Selection('انواع')"> انواع الشعر</button>
+  <button class="btn" onclick="Selection('ماسك')"> ماسكات للعناية بالشعر</button>
+  <button class="btn" onclick="Selection('العناصر')"> العناصر الغذائية المهمة للشعر</button>
+    <button class="btn" onclick="Selection('نصائح')"> نصائح مهمة للعناية بالشعر</button>
+	<button class="btn" onclick="Selection('قنوات')"> بعض القنوات المفيدة</button>
+	
+</div>
+
+
+<div class="row">
+<!-- انواع -->
+  <div class="column انواع">
+    <div class="content">
+      <img src="ماش.jpg" alt="شعر" style="width:100%">
+      <h4>الشعر الدهني</h4>
+      <p>يعاني أصحاب الشعر الدهني من كثرة الإفرازات اللزجة من فروة الرأس، والتي تزيد ليونة الشعر، الأمر الذي يزيد 
+   تساقطه، وقد يكون الشعر دهنيّاً بطبيعته، أو يصبح كذلك في فترة محدّدة نتيجة بعض العوامل، مثل زيادة إفراز 
+   الهرمونات، عند مرحلة البلوغ مثلاً</p>
+    </div>
+  </div>
+  <div class="column انواع">
+    <div class="content">
+    <img src="ماش.jpg" alt="شعر" style="width:100%">
+      <h4>الشعر الجاف</h4>
+      <p>يعاني العديد من أصحاب الشعر الجاف من تشقّق نهاياته، وجفافه، بالإضافة لصعوبة تصفيفه، وكثرة تساقطه، وذلك نتيجة 
+<label>عدّة أسباب</label>
+جفاف الشعر، وقلّة إفراز الغدد لإفرازاتها الطبيعيّة، ممّا يقلّل كمّية الدهون الواصلة إلى الشعر، والمهمّة في تليينه
+.ولا بد من الإشارة إلى أنّ الشعر قد يكون جافّاً بطبيعته، وذلك نتيجة الإصابة بخلل ما في الهرمونات
+
+</p>
+    </div>
+  </div>
+  <div class="column انواع">
+    <div class="content">
+    <img src="ماش.jpg" alt="شعر" style="width:100%">
+      <h4>الشعر العادي</h4>
+      <p>يتميّز أصحاب الشعر العادي باعتدال كمّية الدهون التي تفرزها فروة الرأس، الأمر الذي يساهم في المحافظة على 
+  نعومته، وحمايته من الجفاف، وتتم العناية به بتجنب الإفراط في غسله، واختيار الشامبو الملائم له، والمحتوي على المواد 
+  الطبيعيّة، بالإضافة لتجنّب تعريضه لأشعّة الشمس لفترة طويلة، ومن المفضّل استخدام المواد المغذّية والمرطّبة بين الحين والآخر</p>
+    </div>
+  </div>
+  
+  <div class="column انواع">
+    <div class="content">
+    <img src="ماش.jpg" alt="شعر "style="width:100%">
+      <h4>الشعر المختلط</h4>
+      <p>  وهو الشعر الدهني عند جذوره؛ بسبب إفراز الدهون، والجاف عند أطرافه، ويعد هذا النوع من أصعب أنواع الشعر؛ لأنّه 
+  يتطلب عناية ورعاية خاصّة، وتمكن العناية به باستخدام بلسم للشعر بوضعه من منتصف الشعر حتّى نهاياته؛ لأنّه يقوّي 
+  .أطراف الشعر، ويُنصح بالابتعاد عن استخدام الشامبوهات المخصّصة للشعر الدهني أو الجاف</p>
+    </div>
+	
+  </div>
+  
+ <!-- ماسكات -->
+  <div class="column ماسك">
+    <div class="content">
+    <img src="ماش.jpg" alt="ماسك" style="width:100%">
+      <h4> ماسك الموز والافوكادو</h4>
+	  
+      <p> <label>: المكونات</label>
+	  <br>
+	   حبة وحدة من الموز 
+	 حبة وحدة من الأفوكادو
+	 <br>
+	 <label> :الطريقة </label>
+	 <br>
+	 خلط الأفوكادو مع الموز باستخدام الخلاط وإضافة ملعقة كبيرة من زيت الزيتون
+	وضع الماسك على الشعر وفروة الرأس مع التدليك، وتركه لمدّة ساعه إلا ربع ثمّ غسله بالماء الدافئ والشامبو
+	<br>
+	  </p>
+    </div>
+  </div>
+
+<div class="column ماسك">
+    <div class="content">
+    <img src="ماش.jpg" alt="ما" style="width:100%">
+      <h4>ماسك الفراولة</h4>
+      <p> <label> :المكونات </label>
+	 <br>
+	   حفنه من ثمار الفراولة الطازجة
+	   ملعقة كبيرة من العسل
+	   ملعقة كبيرة من زيت جوز الهند
+	   <br>
+	   <label>   :الطريقة </label>
+	   <br>
+	   مزج الفراولة مع العسل وزيت جوز الهند للحصول على ماسك
+ترطيب الشعر بالماء الدافئ. وضع الماسك على الشعر وفروة الرأس
+ وتركه لمدّة 15 دقيقة
+	  </p>
+    </div>
+  </div>
+  <div class="column ماسك">
+    <div class="content">
+      <img src="ماش.jpg" alt="ماسك" style="width:100%">
+      <h4> ماسك الحليب والعسل</h4>
+      <p> <label> :المكونات  </label>
+	  <br>
+	   ملعقة صغيرة من العسل
+	  <br>
+	 
+	  كوب من الحليب
+	  <br>
+	  <label> :الطريقة </label>
+	  <br>
+	  مزج الحليب والعسل جيداً في وعاء. وضع الماسك على الشعر وفروة 
+الرأس مع التدليك، وتركه لمدّة 15 دقيقة
+بعد الانتهاء من المدة
+ثم غسله جيدا بالماء الفاتر والشامبو
+
+	  </p>
+    </div>
+  </div>
+  
+  <div class="column ماسك">
+    <div class="content">
+    <img src="ماش.jpg" alt="ما" style="width:100%">
+      <h4>ماسك البيض والزبادي</h4>
+      <p> <label> :المكونات </label>
+	 <br>
+	      صفار بيضة واحدة
+      ثلاث ملاعق زيت الزيتون
+             ملعقتين زبادي
+
+	   <br>
+	   <label>   :الطريقة </label>
+	   <br>
+	   خلال إحضار صفار لبيضة واحدة، وخلطها مع ثلاث ملاعق من زيت الزيتون وملعقتين زبادي، ويوضع الخليط الناتج بعد خلطه جيداً على الشعر
+        ويترك لمدة نصف ساعة مع تغطيته بمنشفة دافئة، ويفضل أن يوضع هذا الخليط على الرأس مرتين أسبوعياً 	   
+	  </p>
+    </div>
+  </div>
+   <div class="column ماسك">
+    <div class="content">
+    <img src="ماش.jpg" alt="ماسك" style="width:100%">
+      <h4>  ماسك المايونيز</h4>
+      <p> <label> :المكونات</label>
+	  <br>
+	  
+	  نصف كوب من المايونيز كامل الدسم أو كمية تكفي لتغطية الشعر
+	  <br>
+	  <label> :الطريقة</label>
+	  <br>
+	  وضع المايونيز في وعاء وتركه حتّى يصبح بنفس درجة حرارة الغرفة، ثمّ ترطيب الشعر بالماء الدافئ وذلك 
+لتسهيل وضع الماسك عليه، وضع المايونيز على فروة الرأس وعلى جميع أجزاء الشعر، ثمّ تمشيط الشعر باستخدام 
+الفرشاة لتوزيع الماسك على جميع الأجزاء، وتغطية الشعر بغطاء بلاستيكي وتركه لمدّة ساعة على الأقل ثمّ غسله بالماء 
+والشامبو، ويمكن ترك الماسك طوال الليل وغسله في اليوم التالي للحصول على أفضل النتائج.
+	<br>
+	</p>
+    </div>
+  </div>
+  <!--العناصر -->
+  <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>الكربوهيدرات</h4>
+      <p><br>
+	  يجب تناول الكربوهيدرات المعقدة؛ كالحبوب الكاملة، والأرز البني، والفواكه والخضروات، والدقيق الأبيض، حيث إنّ 
+	   65%
+	    من الطاقة التي يحتاجها جسم الإنسان ينبغي أن تكون من الكربوهيدرات 
+		<br>
+	  </p>
+    </div>
+  </div>
+  
+  
+  
+   <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>الأحماض الدهنية</h4>
+      <p> <br>
+	    تعتبر البقوليّات والحبوب الكاملة، والمكسرات، والبذور الزيتية من الأحماض الدهنية المفيدة للشعر، حيث إنّها تحسن 
+			نسيج الشعر الجاف وتضفي عليه النعومة، وتقوي نمو الشعر بشكل عام، ثمَّ إنّ ما يتراوح بين خمسة عشر إلى عشرين 
+			بالمئة من السعرات الحراريّة اللازمة للجسم ينبغي أن تكون من الأحماض الدهنيّة
+		 <br>
+	  </p>
+    </div>
+  </div>
+  
+   <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>فيتامين أ</h4>
+      <p><br>
+	 يعد فيتامين أ مهماً جداً لفروة الرأس، ويمكن الحصول عليه من الخضروات، والفواكه، والبطاطا الحلوة، والمشمش
+		والقرنبيط ، والفلفل الحلو الملون. فيتامين هـ لفيتامين هـ دور مهم في تطويل الشعر، وهو متوفر في الأفوكادو، ونخالة 
+		الأرز، والمكسرات، والخضروات الخضراء الغامقة، والبقوليات بأنواعها، وكذلك الحبوب الكاملة
+		<br>
+	  </p>
+    </div>
+  </div>
+  
+  
+
+  <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>فيتامين ك</h4>
+      <p>
+	   يتوفر فيتامين ك في الألبان ومشتقاتها، والتين ، والقرنبيط، والخس، والخضار الورقيّة الخضراء الداكنة، وفول الصويا 
+		 والقمح. فيتامين ب يعد فيتامين ب مهم لشعر صحي خالٍ من التقصّف والتساقط والشيب، ويكثر هذا الفيتامين في 
+		 الحمضيّات، والخضروات الطازجة، والفواكه، والطماطم
+		 <br>
+	  </p>
+    </div>
+  </div>
+  
+  <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>فيتامين ج</h4>
+      <p><br>
+	  يتوفر فيتامين ج في الحمضيات والليمون، والفراولة والبرتقال، والتوت، والخضروات الطازجة، والفلفل الأحمر، وهذا 
+		  النوع من الفيتامين مهم جداً للون الشعر وتطويله
+		<br>
+	  </p>
+    </div>
+  </div>
+  <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>فيتامين ب</h4>
+      <p><br>
+	 <br>
+		   يعد فيتامين ب مهم لشعر صحي خالٍ من التقصّف والتساقط والشيب، ويكثر هذا الفيتامين في الحمضيّات، والخضروات 
+		   الطازجة، والفواكه، والطماطم
+		<br>
+	  </p>
+    </div>
+  </div>
+  
+  
+   <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>البروتين</h4>
+      <p> <br>
+	    البروتين مهم جداً في تقوية جذوع الشعر وأصوله، حيث يمنع تساقطه، فلا بد ّ من تناول الأغذية المحتوية على البروتين؛ 
+		كالألبان ومشتقاتها، والمكسرات وأنواعها، والبقوليات والحبوب بأنواعها، ولا ننسى أنَّ جسم الإنسان يحتاج يوميّاً إلى 
+		20%
+		 تقريباً من السعرات الحراريّة الناتجة عن البروتينات، فنقص البروتينات يؤدي إلى تساقط الشعر وضعف نموه
+		 <br>
+	  </p>
+    </div>
+  </div>
+  
+  
+  
+   <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4>المعادن المهمة للشعر</h4>
+      <p> <br>
+	     وهو متوفر في العسل الأسود، والفواكه المجففة، والتين، والتوت. البوتاسيوم: ويكثر توفره في الموز، ويلعب دوراً كبيراً 
+	  في نقل المغذيّات للشعر من خلال أغشية الخلايا. المغنيسيوم: ويكثر توفره في الألبان ومنتجاتها، والمكسرات، والفواكه
+	  الزنك: يحفز نمو الشعر من خلال تقوية وتحسين المناعة، وهو متوفر في البقوليّات، والفطر، والحبوب الكاملة، ومنتجات 
+	  الألبان، والخضروات الورقيّة
+		 <br>
+	  </p>
+    </div>
+  </div>
+  <div class="column العناصر">
+    <div class="content">
+    <img src="ماش.jpg" alt="فيتامين" style="width:100%">
+      <h4> Eفيتامين </h4>
+      <p> <br>
+	    وتكمُن أهميته للشعر في احتواءه على موادٍ مضادة للأكسدة، وهذه المواد تُنشّط الدورة الدمويّة في فروة الرأس، كما تُحفّز 
+		نمو الشعر، ومن أهم مصادره زيت اللوز، والذي يُمكن إضافته إلى الطعام أو يُمكن استخدامه من خلال تدليك فروة 
+		الرأس به، واستخدامه مرةً واحدةً في الأسبوع
+		 <br>
+		 <br>
+		 <br>
+	  </p>
+    </div>
+  </div>
+  
+  <!-- النصائح -->
+  
+  <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	  
+	    عدم غسل الشعر يوميّاً، وعند غسله لا بدّ من استخدام بلسم للشّعر، مع غسله بماءٍ بارد، ويُفضل أن يكون الشامبو والبلسم 
+		من نفس الشركة الصانعة لهما. تجنّب الماء الساخن للشّعر عند الاستحمام؛ لأنه يؤدي إلى جفاف الشّعر، ويوضع الشامبو 
+		على فروة الرأس وليس على أطرافه.
+		 
+		 
+	  </p>
+    </div>
+  </div>
+  
+  <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	     تناول الغذاء الصحيّ: يعدّ تناول الغذاء الصحي أول خطوةٍ مهمّة للحفاظ على الشّعر، ويُقصد به الغذاء الذي يحتوي على 
+		 البروتين الغني بالأحماض الأمينية مثل: الجبن، والحليب، واللّبن، والحديد مثل: السمك، وبذور الصويا. 
+		 
+		 
+		 <br>
+		 <br>
+		 
+	  </p>
+    </div>
+  </div>
+  
+  <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	      الحذر الشديد عند تمشيط الشّعر المبلل؛ لأنه يكون أكثر ضعفاً ومعرضاً للتساقط أكثر، ويُستخدم مشطٌ عريض الأسنان 
+		  
+		 لتمشيط الشعر من جذوره وحتى نهاية أطرافه. قصّ أطراف الشعر المتقصّفة كل 6-8 أسابيع
+		 <a href="https://www.youtube.com/watch?v=Nh4bbD98WEU" align="right">اضغط هنا</a> للفائدة
+		 
+		  <br>
+		 <br>
+	  </p>
+    </div>
+  </div>
+   <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	    تدليك فروة الرأس أثناء الاستحمام عند وضع الشامبو؛ فذلك يحفزّ الدورة الدموية، ويساعد في تنظيف فروة الرأس
+		
+		 <a href="https://www.youtube.com/watch?v=PMMLa4uaLp0" align="right">اضغط هنا</a> للفائدة
+		 <br>
+		 <br>
+		 
+	  </p>
+    </div>
+  </div>
+  
+  
+  
+   <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	     عدم غسل الشعر بشكل يومي، فذلك يؤدي إلى التخلص من الزيوت الطبيعية في الشعر وبالتالي سيجف بشكل أسرع
+	                                                     وعدم استخدام مجففات الشعر (السشوار) بشكل كبير
+													<a href="https://www.youtube.com/watch?v=aTvGe1G0xHU" align="right">اضغط هنا</a> للفائدة
+		 <br>
+	  </p>
+    </div>
+  </div>
+   <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	     تمشيط الشعر مرتين باليوم من نهاية الأطراف للأعلى حتى الجذور
+		 <br>
+		 <br>
+		 <br>
+	  </p>
+    </div>
+  </div>
+   <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	    تجفيف الشعر قليلاً بمنشفة مخصصة للشعر قبل وضع البلسم عليه؛ لأنّ الماء الكثير يعيق من وصول البلسم للشعر، وكي 
+		يساعد ذلك على منح الشعر الترطيب المناسب كي
+		.يبدو صحيّاً وبرّاقاً 
+		
+		
+		 <br>
+	  </p>
+    </div>
+  </div>
+  
+  <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	 ارتدي باندانا من الحرير فهي من الطرق الصحية للعناية بالشعر,هي لفة بأشارب او باندانا من الحرير
+	 قبل النوم فان ذلك يمنع الشعر من التهيش والتقصف ويحافظ على ملمسه رطبا وحريريا.
+		 
+	  </p>
+    </div>
+  </div>
+  
+   <div class="column نصائح">
+    <div class="content">
+    <img src="ماش.jpg" alt="نصائح" style="width:100%">
+     
+      <p> <br>
+	  
+	  حمام الزيت الدافئ لاعطاء شعرك ترطيبا عميقايمكنك تدفئة احد الزيوت الطبيعية
+	  وتدليك الشعر بها ليلا,قومي بتغطية شعرك بمنشفة دافئة او غطاء شعر بلاستيك واتركي الزيت حتى الصباح.
+		 
+	  </p>
+    </div>
+  </div>
+   
+ 
+  <!--هنا الفديوهات -->
+ 
+ 
+<div class="column قنوات ">
+  <div class="content">
+   <!-- هنا الاسم حق الفديو جولي حاج -->
+   <img src="ج.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315" src="ك.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+
+<div class="column قنوات ">
+  <div class="content">
+   <!-- هنا الاسم حق الفديو لوليتا-->
+   <img src="لو.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="نصائح-عناية-شعر.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+<div class="column قنوات ">
+  <div class="content">
+     <!--  هنا الاسم حق الفديو نور ستار -->
+   <img src="ت.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="2 (2).mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+
+<div class="column قنوات ">
+  <div class="content">
+ <!--  هنا الاسم حق الفديو ياسمينا -->
+   <img src="y.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="كيف.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+
+  
+   
+ </div>
+  
+<!-- END MAIN -->
+</div>
+
+
+
+ 
+
+ <!-- هنا حق الزر اللي يوديك للقسم الثاني-->
+ 
+   <a  href= "skin.html" class="bttth"  style="  position: fixed
+  top:10 %/* مكان الزر*/
+  
+ center-left: 10%/*مكان الزر*/
+  transform: translate(-20%, -50%)/*مكان الزر*/
+  -ms-transform: translate(-50%, -20%)/* مكان الزر*/
+  background-color: white
+  color: black
+  font-size: 10px
+  padding: 10px/* يخص الزر*/
+ 
+  text-align: left">قسم العناية بالبشرة</a>
+  
+
+  <hr>
+    
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+<i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> 
+      <br>
+       <a href="project_IT.html" target="_self"> الصفحة الرئيسية</a><br>
+      <a href="Who are we.html" target="_blank"> من نحن </a><br>
+      <a href="call-us.html" target="_blank"> اتصل بنا </a>
+  
+     </footer> 
+                  <!-- End page content -->
+<script>
+
+Selection("all")
+function Selection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var h = document.getElementById("hair");
+var btns = h.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+            //for login form
+    // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// Navbar mneu 
+    // Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("mySidebar").style.width = "100%";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+</body>
+</html>

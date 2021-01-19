@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>العناية بالبشرة</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="HTML5-CSS-Reset.css" type="text/css">
+    <!-- For CSS Page -->
+<link rel="stylesheet" href = "project-it.css" type="text/css">
+<!--For styling the page  -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <!--For font -->
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+    
+<style>.w3-bar-block, .w3-bar-item {padding:20px}
+    /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+ 
+}
+h4,h2{
+text-align:center;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 10px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float:left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #fff0f0;
+  padding: 10px;
+ text-align:right;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+   border: none;
+  outline: none;
+  float:right;
+  margin:3px;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;/*علامة الفاره*/
+
+}
+
+.btn:hover {
+  background-color: #ddd;
+  
+} 
+
+.btn.active {
+  background-color: #fff0f0;
+  color: white;
+
+}
+label{
+color:#004d00;
+}
+
+
+</style>
+</head>
+
+<body>
+ 
+<!-- Navigation Bar  -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="project_IT.html" onclick="w3_close()" class="w3-bar-item w3-button">الصفحة الرئيسية</a>
+  <a href="depbody.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالجسم</a>
+  <a href="hair.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالشعر</a>
+  <a href="skin.html" onclick="w3_close()" class="w3-bar-item w3-button">عناية بالبشرة</a>
+
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">انضمي لنا</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Care.JPG" alt="" class="avatar" style="width:20%; height: 40%">
+    </div>
+  <h1 style="text-align:center">هلا والله</h1>
+    <h2 style="text-align:center">جديدة هنا ؟</h2>
+        <p style="text-align:center">سجلي معنا واكتشفي المحتوى الرائع !</p>
+    <div class="container">
+      <label for="uname"><b>اسم المستخدم</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>كلمة المرور</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit" style="background-color: #fff0f0">تسجيل دخول</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> تذكرني
+      </label>
+    </div>
+
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">إلغاء</button>
+      <span class="psw">نسيت <a href="#">كلمة المرور؟</a></span>
+    </div>
+  </form>
+</div>
+</nav>
+    
+ <!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1300px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16"> <img src="logo.png" alt="" style="width:10%"></div>
+  </div>
+</div>
+<!-- MAIN (Center website) -->
+<div class="main">
+<h1 align="center">قسم العناية بالبشرة</h1>
+<hr>
+
+<h2 align="right">البشرة</h2>
+<p align="center" >البشرة المشرقة هي سر جمال المرأة، كما أنّها تلفت الأنظار دائماً، وكلما زاد الاهتمام بها فإنّ ذلك يزيد من جمالها
+ لذلك يجب على المرأة الاهتمام بها تنظيفها وترطيبها باستمرار باستخدام الكريمات المناسبة لنوع بشرتها أو بوصفاتٍ وموادٍ طبيعيّة متوفّرة في كلِّ منزل 
+ وإنّ العناية بالبشرة ليس أمراً صعباً ولا يحتاج للوقت ولا للجهد ولا لهدر الأموال فهي خطواتٍ روتينيةٍ بسيطةٍ
+ <br>
+ ...اليك نظام عناية مبسط نتمنى أن تنالين الفائدة
+ </p>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="Selection('all')"> Show all</button>
+   <button class="btn" onclick="Selection('انواع')"> أنواع البشرة</button>
+  <button class="btn" onclick="Selection('وصفات')"> وصفات طبيعية للعناية بالبشرة</button>
+   <button class="btn" onclick="Selection('طرق')"> طرق العناية بالبشرة</button>
+   <button class="btn" onclick="Selection('عناصر')"> العناصر الغذائية المهمة للبشرة</button>
+  <button class="btn" onclick="Selection('قنوات')"> بعض القنوات المفيدة</button>
+</div>
+
+
+<div class="row">
+
+  <!-- الانواع-->
+ <div class="column انواع">
+    <div class="content">
+	
+    <img src="sk.jfif" alt="انواع" style="width:100%">
+	<h4> البشرة الدهنية</h4>
+      <p>يعدّ حبّ الشّباب والمسام الواسع واللّمعان في البشرة من أهمُّ المشاكل الّتي تواجه أصحاب البشرة الدُّهنيّة والتّي في 
+الأغلب تظهر عند الأشخاص الذّين يعيشون في المناطق الحارّة والرّطبة، وتبدأ مشكلة حبّ الشّباب غالباً مع سنّ البلوغ 
+.عند كل من النّساء والرّجال
+</p>
+    </div>
+  </div>
+  
+   <div class="column انواع">
+    <div class="content">
+    <img src="sk.jfif" alt="انواع" style="width:100%">
+	<h4> البشرة المختلطة</h4>
+      <p>تُعرّف البشرة المختلطة بأنّها مزيج بين أكثر من نوعين من البشرة، فعلى سبيل المثال قد تكون هناك مناطق من البشرة
+تعاني من الجفاف، بالإضافة إلى مناطق أخرى دهنية، كالجبين، والأنف، والذقن، وقد تعاني البشرة المختلطة من بعض 
+المشاكل، مثل التجاعيد أو حب الشباب الوردي، وقد يكون من الصعب العناية بالبشرة المختلطة</p>
+    </div>
+  </div>
+  
+   <div class="column انواع">
+    <div class="content">
+	
+    <img src="sk.jfif" alt="انواع" style="width:100%">
+	<h4> البشرة الجافة</h4>
+      <p>تعرض البشرة للجفاف عندما لا تنتج الغدد الدهنية الموجودة أسفل الجلد كميات كافية من المادة الدهنية التي ترطّب 
+البشرة، وهي حالةٌ وراثيةٌ في الغالب، وتسبب هذه الحالة نقصاً في رطوبة الجلد، ولذلك فإنّ البشرة الجافة تتعرض للتقدم 
+في العمر أسرع من البشرة الدهنية
+<br>
+<br>
+</p>
+    </div>
+  </div>
+  
+  
+   <div class="column انواع">
+    <div class="content">
+	
+    <img src="sk.jfif" alt="انواع" style="width:100%">
+	<h4> البشرة الحساسة</h4>
+      <p>قد تكون البشرة الحساسة جافةً أو دهنية، لكنها تتميز بأنها شديدة التفاعل والحساسية، ويمكن أن تسبب الحكة، أو التهيج 
+ولذلك فإنّها تتطلب قدراً كبيراً من الرعاية والاهتمام</p>
+    </div>
+  </div>
+  
+   <!-- وصفات-->
+ <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك العسل والأفوكادو </h4>
+	  <p> 
+	<label> :المكونات  </label>
+     <br>ثلاث ملاعق كبيرة من الكريما الطازجة
+                           <br>ربع حبة أفوكادو
+                   				   ملعقة طعام من العسل
+								   <br>
+					 <label> :الطريقة <br></label>
+. تُوضع جميع المكونات في الخلاط، وتُمزج للحصول على خليطٍ ناعم. يُوضع المزيج على البشرة لمدة ساعةٍ حتى يجف. يُغسل الوجه بالماء الدافئ
+<br>
+<br>
+</p>
+    </div>
+  </div>
+  <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك عصير الليمون </h4>
+	<p> 
+	<label> :المكونات  <br> </label>
+      
+	  ليمونة 
+	   <br> 
+          ماء
+
+	   <br>
+	 <label> :الطريقة <br></label>
+					يُمزج عصير الليمونة مع الماء، وتغطس به قطنة، ثم نمسح البشرة كاملةً، ويترك عليها لمدة 15 دقيقة
+					.ثم تُغسل البشرة بعد ذلك بماءٍ دافىء، ويُوضع مرطب للبشرة بعد غسلها لكي لا تجف,
+					
+</p>
+    </div>
+  </div>
+ 
+  
+  
+   <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك الخميرة والليمون </h4>
+	<p> 
+	<label> :المكونات  </label>
+      
+	    <br> خميرة
+           <br>ماء
+   عصير ليمون
+ <br>
+
+	  
+	 <label> :الطريقة <br></label>
+					
+					.تُوضع جميع المكونات، ونعمل منها عجينة سلسة، وتّوضع على الحبّ، وتُغطى بقطعة شاش لمدة 10 دقائق. يُغسل الوجه بعد ذلك كالمعتاد
+					<br>
+					<br>
+</p>
+    </div>
+  </div>
+  
+   <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك ورق الريحان </h4>
+	  <p> 
+	<label> :المكونات  </label>
+      
+	     <br>ثلاث ملاعق طعام من أوراق الريحان المجففة
+                           كوب من الماء المغلي
+
+
+	   <br>
+	 <label> :الطريقة <br></label>
+		تُوضع أوراق الريحان مع الماء المغلي، وبعد تبريدها نضعها بعلبةٍ، ونرش منها على البشرة، مع 
+        .تدليكها بلطفٍ، ويستخدم القطن لتوزيعه على البشرة. تكرر يومياً قبل غسل الوجه بالغسول		
+    </p>
+    </div>
+  </div>
+  
+  <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك الشوفان</h4>
+	<p> 
+	<label> :المكونات  </label>
+      
+	
+           <br>                        ثلث كوب من دقيق الشوفان
+                <br>            ملعقتين كبيرتين من لبن الزبادي
+                     <br>             ملعقتين كبيرتين من العسل
+                                                بياض بيضة
+
+ <br>
+  <br>
+	  
+	 <label> :الطريقة <br></label>
+					.خلط المكونات، ووضعها على البشرة لمدّة تتراوح بين 10و15 دقيقة، ثمّ غسل البشرة بالماء الدافئ
+</p>
+    </div>
+  </div>
+  
+  <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك اللوز والسكر</h4>
+	<p>
+	<label> :المكونات  </label>
+       
+	          
+                     <br>            كوب من السكر الأبيض
+                          <br>   نصف كوب من السكر البني
+                           <br>نصف كوب من اللوز المطحون
+                    ملعقتان كبيرتان من زيت الزيتون
+
+
+	   <br>
+	 <label> :الطريقة <br></label>
+					تُوضع جميع المكونات، وتُخلط جيداً، وتُوضع على البشرة الجافة، ثم تغسل بماءٍ دافئ، ثم ماء بارد
+			 <br>
+			  
+</p>
+    </div>
+  </div>
+    
+  
+  
+  
+   
+   <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك زيت جوز الهند وزيت الزيتون والجليسرين </h4>
+	<p>
+	<label> :المكونات  </label>
+       
+	 
+  <br>ثلاث ملاعق طعام من زيت جوز الهند
+  <br>ملعقة طعام من زيت زيتون
+  <br>ملعقة طعام من الجليسرين
+ملعقتان من الشاي الأخضر 
+
+ <br>
+	  
+	 <label> :الطريقة <br></label>
+					.تُوضع جميع المكونات في وعاءٍ، وتُخلط مع بعضها. يوضع المزيج على البشرة قبل النوم
+</p>
+    </div>
+  </div>
+  
+  <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك البرتقال والكركم</h4>
+	 <p>
+	<label> :المكونات  </label>
+      
+	    <br> ملعقتان من عصير البرتقال
+                   رشة من الكركم
+
+ <br>
+	  
+	 <label> :الطريقة <br></label>
+					.يدلك به الوجه والرقبة قبل النوم كما يمكن استخدامه لليدين والساقين، ويترك لثلث ساعة ثمّ يغسل بالماء، ويكرر استخدام الوصفة يومياً
+</p>
+
+ <br>
+  <br>
+   <br>
+    </div>
+  </div>
+  
+   
+ 
+   <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك السكر والقهوة وعصير الليمون والملح </h4>
+	  <p> 
+	<label> :المكونات  </label>
+    
+	   <br>  ملعقتي طعام من السكر
+         <br> نصف ملعقة من القهوة 
+              <br>  رشة من الملح
+ملعقة واحدة من عصير الليمون 
+
+ 
+	  
+	 <label> :الطريقة <br></label>
+					تُمزج جميع المكونات لتصبح عجينةً لينة. توضع على البشرة، وتُدلّك بلطفٍ بحركاتٍ دائرية لمدة 
+					.دقيقتين. يُغسل الوجه بعد ذلك
+</p>
+    </div>
+  </div>
+   
+   
+
+  
+  
+  <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك العسل والزبادي </h4>
+	 <p>
+	<label> :المكونات  </label>
+      
+	   <br> ملعقة من العسل
+ ملعقة زبادي غير محلى 
+ <br>
+	  
+	 <label> :الطريقة <br></label>
+				.يُمزج المكونان معاً، ويوضع المزيج على البشرة لمدة 15 دقيقة. تُغسل البشرة بماءٍ دافئ، ثم تُجفف
+</p>
+    </div>
+  </div>
+  
+   <div class="column وصفات">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> ماسك الارز</h4>
+	 <p>
+	<label> :المكونات  </label>
+      
+	   <br> ملعقة كبيرة من الزبادي
+ملعقة من الارز المطحون	   
+ <br>
+	  
+	 <label> :الطريقة <br></label>
+				امزجي الزبادي مع الارز واتركي المزيج على وجهك مايقارب اربعين دقيقة ثم اشطفيه بالماء الدافئ فالبارد وجففي برفق
+    </div>
+  </div>
+  <!-- الطرق-->
+   
+  
+  <div class="column طرق">
+    <div class="content">
+	
+      <img src="sk.jfif" alt="طرق" style="width:100%">
+     <p>شرب الماء بكثرةٍ لبقاء البشرة رطبةً ومتوهجة </p>
+     
+    </div>
+  </div>
+  <div class="column طرق">
+    <div class="content">
+    
+      <img src="sk.jfif" alt="طرق" style="width:100%">
+	    <p>ربط الشّعر للأعلى عند النّوم، لتجنّب ملامسته للوجه</p>
+     
+    </div>
+  </div>
+  <div class="column طرق">
+    <div class="content">
+    
+      <img src="sk.jfif" alt="طرق" style="width:100%">
+      <p>استشارة المختصّين بمشاكل البشرة عند الحاجة</p>
+	   <br>
+    </div>
+  </div>
+  
+  <div class="column طرق">
+    <div class="content">
+    
+      <img src="sk.jfif" alt="طرق" style="width:100%">
+	    <p>تدليك الوجه لمظهرٍ صحيٍّ للبشرة ومشرق كل يوم</p>
+     
+    </div>
+  </div>
+  <div class="column طرق">
+    <div class="content">
+   
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+      <p>تنظيف البشرة، وذلك بغسلها مرّتينّ يوميّاً صباحاً ومساءً</p>
+	   <br>
+    </div>
+  </div>
+  <div class="column طرق">
+    <div class="content">
+     <img src="sk.jfif" alt="طرق" style="width:100%">
+       <p> وقاية البشرة من أشعّة الشّمس، فتعرّض البشرة لأشعّة الشّمس فوق البنفسجيّة يسبّب لها التّلف 
+  </p>
+    
+    </div>
+  </div>
+
+  <div class="column طرق">
+    <div class="content">
+      <img src="sk.jfif" alt="طرق" style="width:100%">
+     <p>استخدام مكعّبات الثّلج قبل النّوم للتّخلّص من المسامات الواسعة والتّجاعيد</p>
+    </div>
+  </div>
+  <div class="column طرق">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+      <p>تجنُّب القلق والتّوتر، من خلال تمارين التّأمُّل والمشي خارجاً</p>
+    </div>
+  </div>
+  <div class="column طرق">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+      <p>تغيير الوسادة الخاصّة باستمرار، وذلك لأنّها تلتقط البكتيريا والأوساخ</p>
+    </div>
+  </div>
+   
+    <!-- العناصر-->
+    <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> البولي فينولات</h4>
+	<p>
+	قدأظهرت الدراسات أن البولي فينولات تحمل خصائص مضادة للسرطان,كما تعمل على تقليل خطر الاصابة بأمراض السرطان
+	المتعلقة بالتعرض لأشعة الشمس
+	<strong>يتوافر في :</strong>
+	الشاهي الاخضر
+</p>
+    </div>
+  </div>
+   
+   <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> Eفيتامين </h4>
+	<p>
+	يعمل بمثابة حماية لخلايا البشرة ,فهو يحمي خلايا البشرة من التعرض للأشعة فوق البنفسجية عند اتحاده مع فيتامين 
+	سي ,كما يحتوي ايضا على مضادات للاأكسدة
+	<strong>يتوافر في :</strong>
+	جنين القمح والبذور والأفوكادو 
+</p>
+    </div>
+  </div>
+  
+  <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> البيتا كاروتين </h4>
+	<p>
+	هي احد العناصر الحيوية لصحة البشرة,فهي تحتوي على فيتامين اي المسؤول عن اصلاح ونمو الأنسجة في البشرة
+	<strong>يتوافر في :</strong>
+	الببرتقال,الجزر,القرع العسلي,الكانتالوب,السبانخ واللفت
+</p>
+    </div>
+  </div>
+ <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> الأوميقا 3 </h4>
+	<p>
+	هي واحدة من الدهون الصحية التي تساعد على مرونة الجسم,وتحافظ على سلامة أغشية الخلايا,مما يعمل على 
+ازالة السموم خارج خلايا البشرة,كما تعمل ايضا على حماية البشرة ضد أشعة الشمس الضارة
+	<strong>يتوافر في :</strong>
+الجوز,بذور الكتان,الأسماك كالسلمون والماكريل
+</p>
+    </div>
+  </div>
+
+
+ <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4> الماء</h4>
+	<p>
+	
+	قد لا يعتبر الماء أحد الفيتامينات، لكنه من أهم وأفضل الوسائل الطبيعية للعناية بالبشرة. فشرب من 6-8 أكواب 
+	من الماء يوميًا هي أولى الخطوات الأساسية للعناية اليومية بالبشرة. حيث يحافظ الماء على ترطيب الجسم و
+	والبشرة، فبذلك، تحصلين على بشرة صحية وأكثر شبابًا
+	
+</p>
+    </div>
+  </div>
+  
+  <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4>C فيتامين </h4>
+	<p>
+	
+	يعزز مناعة
+	الجسم,
+	ايضا معروف
+	بقدراته الفائقة في
+	تحفيز انتاج الكولاجين
+	 
+	<strong>يتوافر في :</strong>
+	الفلفل الملون والبروكلي ,والفراولة والجوافة
+</p>
+    </div>
+  </div>
+  
+  <div class="column عناصر">
+    <div class="content">
+    <img src="sk.jfif" alt="طرق" style="width:100%">
+	<h4>السيلينيوم </h4>
+	<p>
+	يعمل السيلينيوم على تعزيز مرونة البشرة وحمايتها من التلف 
+	<strong>يتوافر في :</strong>
+	جنين القمح والمأكولات البحرية والبيض
+    </div>
+  </div>
+  
+ 
+  
+ <!--هنا الفديوهات -->
+ 
+ 
+<div class="column قنوات ">
+  <div class="content">
+   <!--  الديو حق شهد -->
+   <img src="شه.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="شهد.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+
+<div class="column قنوات ">
+  <div class="content">
+  <!-- الفديو حق جمالك-->
+   <img src="جمال.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="جمالك.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+<div class="column قنوات ">
+  <div class="content">
+      <!-- الفديو حق ساره -->
+   <img src="ساره.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="sara.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+
+<div class="column قنوات ">
+  <div class="content">
+ <!--  هنا الاسم حق الفديو ياسمينا -->
+   <img src="ياسمينا.JPG" alt="قنوات مفيدة" style="width:100%">
+<iframe  height="315"
+src="yas.mp4">
+</iframe>  
+<!-- ------الفيديو------ -->
+</div>
+</div>
+
+  
+<!-- END MAIN -->
+</div>
+</div>
+
+    
+     <hr>
+    
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+       <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i> 
+      <br>
+       <a href="project_IT.html" target="_self"> الصفحة الرئيسية</a><br>
+      <a href="Who are we.html" target="_blank"> من نحن </a><br>
+      <a href="call-us.html" target="_blank"> اتصل بنا </a>
+  
+     </footer> 
+                  <!-- End page content -->
+<script>
+Selection("all")
+function Selection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+        //for login form
+    // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// Navbar mneu 
+    // Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("mySidebar").style.width = "100%";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+</script>
+</body>
+</html>
